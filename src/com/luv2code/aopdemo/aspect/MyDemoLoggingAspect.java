@@ -22,7 +22,7 @@ public class MyDemoLoggingAspect {
 	
 	// create point: include package ... exclude getter/setter
 	@Pointcut("forDaoPackage() && !(getter() || setter())")
-	public void forDaoPackageNoGetterSetter() {}
+	private void forDaoPackageNoGetterSetter() {}
 	
 	@Before("forDaoPackageNoGetterSetter()")
 	public void beforeAddAccountAdvice() {
